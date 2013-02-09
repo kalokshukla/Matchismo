@@ -180,7 +180,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sJT-pR-DD3">
-                                <rect key="frame" x="164" y="184" width="63" height="77"/>
+                                <rect key="frame" x="165" y="184" width="63" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <state key="normal" title="">
@@ -283,18 +283,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Matchismo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" id="z85-tL-ZyJ">
-                                <rect key="frame" x="20" y="350" width="280" height="21"/>
+                                <rect key="frame" x="20" y="346" width="280" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="NBp-3E-4sg">
-                                <rect key="frame" x="122" y="413" width="79" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Gng-1u-voK">
-                                <rect key="frame" x="135" y="379" width="50" height="20"/>
+                                <rect key="frame" x="135" y="370" width="50" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Deal">
@@ -308,13 +304,20 @@
                                     <action selector="dealButtonPressed:" destination="2" eventType="touchUpInside" id="4Bg-gy-Ozx"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="0Xx-cy-yS8">
+                                <rect key="frame" x="135" y="397" width="51" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="2"/>
+                                    <segment title="3"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="flipsLabel" destination="2Bb-X7-1J5" id="LAp-O2-7Fo"/>
                         <outlet property="instructionsLabel" destination="z85-tL-ZyJ" id="2Yr-s5-n2R"/>
-                        <outlet property="modeSwitch" destination="NBp-3E-4sg" id="RcQ-oO-sHo"/>
                         <outlet property="scoreLabel" destination="ubh-6E-428" id="Nqo-zb-g62"/>
                         <outletCollection property="cardButtons" destination="7Dq-lG-AS4" id="pBD-53-zEQ"/>
                         <outletCollection property="cardButtons" destination="B5m-Hp-Ay5" id="PLR-ak-CXI"/>
