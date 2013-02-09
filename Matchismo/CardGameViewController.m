@@ -13,8 +13,10 @@
 @interface CardGameViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
 @property (nonatomic) int flipCount;
+@property (weak, nonatomic) IBOutlet UILabel *instructionsLabel;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
+@property (weak, nonatomic) IBOutlet UISwitch *modeSwitch;
 @property (strong, nonatomic) CardMatchingGame *game;
 @end
 
@@ -33,6 +35,7 @@
     [self updateUI];
 }
 
+
 - (void) updateUI{
     
     for (UIButton *cardButton in self.cardButtons) {
@@ -44,6 +47,8 @@
         cardButton.alpha=card.isUnplayable?0.3:1.0;
     }
     self.scoreLabel.text= [NSString stringWithFormat:@"Score: %d", self.game.score];
+    NSString *instructionString = self.game.instructions;
+    self.instructionsLabel.text= instructionString;
     
 }
 
