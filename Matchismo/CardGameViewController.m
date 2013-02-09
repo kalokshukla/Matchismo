@@ -21,6 +21,16 @@
 @end
 
 @implementation CardGameViewController
+- (IBAction)dealButtonPressed:(id)sender {
+    self.game = [[CardMatchingGame alloc] initWithCardCount:self.cardButtons.count
+                                                  usingDeck:[[PlayingCardDeck alloc] init]];
+
+    self.flipCount=0;
+    [self updateUI];
+    self.instructionsLabel.text=@"Matchismo";
+    
+    
+}
 
 
 -(CardMatchingGame *)game{
