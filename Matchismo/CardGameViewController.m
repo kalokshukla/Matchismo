@@ -28,7 +28,13 @@
     self.flipCount=0;
     self.mode.enabled=YES;
     [self updateUI];
-    self.instructionsLabel.text=@"Matchismo";
+    if ([self.mode isOn]) {
+        self.instructionsLabel.text=@"Toggle the Switch for 2 Card Matching mode.";
+    }
+    else {
+        self.instructionsLabel.text=@"Toggle the Switch for 3 Card Matching mode.";
+    }
+    
     
     
 }
