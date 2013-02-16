@@ -14,9 +14,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
 @property (nonatomic) int flipCount;
 @property (weak, nonatomic) IBOutlet UILabel *instructionsLabel;
+@property (weak, nonatomic) IBOutlet UISwitch *mode;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
-@property (weak, nonatomic) IBOutlet UISwitch *modeSwitch;
 @property (strong, nonatomic) CardMatchingGame *game;
 @end
 
@@ -31,7 +31,6 @@
     
     
 }
-
 
 -(CardMatchingGame *)game{
     if (!_game) {
@@ -63,7 +62,9 @@
 }
 
 - (IBAction)flipCard:(UIButton *)sender {
-    [self.game flipCardAtIndex:[self.cardButtons indexOfObject:sender]];
+   
+    [self.game flipCardAtIndexV2:[self.cardButtons indexOfObject:sender]];
+    
     self.flipCount++;
     [self updateUI];
 }

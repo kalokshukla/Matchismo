@@ -304,20 +304,17 @@
                                     <action selector="dealButtonPressed:" destination="2" eventType="touchUpInside" id="4Bg-gy-Ozx"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="0Xx-cy-yS8">
-                                <rect key="frame" x="135" y="397" width="51" height="44"/>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="IWv-s8-9qg">
+                                <rect key="frame" x="122" y="416" width="79" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="2"/>
-                                    <segment title="3"/>
-                                </segments>
-                            </segmentedControl>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="flipsLabel" destination="2Bb-X7-1J5" id="LAp-O2-7Fo"/>
                         <outlet property="instructionsLabel" destination="z85-tL-ZyJ" id="2Yr-s5-n2R"/>
+                        <outlet property="mode" destination="IWv-s8-9qg" id="J9n-ia-iIp"/>
                         <outlet property="scoreLabel" destination="ubh-6E-428" id="Nqo-zb-g62"/>
                         <outletCollection property="cardButtons" destination="7Dq-lG-AS4" id="pBD-53-zEQ"/>
                         <outletCollection property="cardButtons" destination="B5m-Hp-Ay5" id="PLR-ak-CXI"/>
@@ -349,7 +346,7 @@
                 <relationship kind="action" name="flipCard:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="flipsLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="instructionsLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="modeSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="mode" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="scoreLabel" candidateClass="UILabel"/>
                 <relationship kind="outletCollection" name="cardButtons" candidateClass="UIButton"/>
             </relationships>
