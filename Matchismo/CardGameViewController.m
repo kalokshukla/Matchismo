@@ -26,6 +26,7 @@
                                                   usingDeck:[[PlayingCardDeck alloc] init]];
 
     self.flipCount=0;
+    self.mode.enabled=YES;
     [self updateUI];
     self.instructionsLabel.text=@"Matchismo";
     
@@ -62,8 +63,14 @@
 }
 
 - (IBAction)flipCard:(UIButton *)sender {
-   
-    [self.game flipCardAtIndexV2:[self.cardButtons indexOfObject:sender]];
+    if ([self.mode isOn]) {
+        [self.game flipCardAtIndexV2:[self.cardButtons indexOfObject:sender]];
+        self.mode.enabled=NO;
+    }
+    else{
+        [self.game flipCardAtIndex:[self.cardButtons indexOfObject:sender]];
+        self.mode.enabled=NO;
+    }
     
     self.flipCount++;
     [self updateUI];
