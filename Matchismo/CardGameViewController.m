@@ -47,11 +47,24 @@
 
 
 - (void) updateUI{
+    UIImage *cardBackImage = [UIImage imageNamed:@"cardback.png"];
     
     for (UIButton *cardButton in self.cardButtons) {
         Card *card = [self.game cardAtIndex:[self.cardButtons indexOfObject:cardButton]];
+        
         [cardButton setTitle:card.contents forState:UIControlStateSelected];
+        
+        
         [cardButton setTitle:card.contents forState:UIControlStateSelected|UIControlStateDisabled];
+        if (card.isFaceUp) {
+            [cardButton setTitle:card.contents forState:UIControlStateNormal];
+            //Need to set image to nil in order to display title properly
+            [cardButton setImage:nil forState:UIControlStateNormal];
+        } else { //If card is face down, display image
+            [cardButton setImage:cardBackImage forState:UIControlStateNormal];
+            [cardButton setTitle:nil forState:UIControlStateNormal];
+        }
+
         cardButton.selected=card.isFaceUp;
         cardButton.enabled=!card.isUnplayable;
         cardButton.alpha=card.isUnplayable?0.3:1.0;

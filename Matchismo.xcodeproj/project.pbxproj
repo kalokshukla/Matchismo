@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D2352ACE16CF7DF3001A28F0 /* cardback.png in Resources */ = {isa = PBXBuildFile; fileRef = D2352ACD16CF7DF3001A28F0 /* cardback.png */; };
 		D2F6645C16C3B39B00BF0EB4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F6645B16C3B39B00BF0EB4 /* UIKit.framework */; };
 		D2F6645E16C3B39B00BF0EB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F6645D16C3B39B00BF0EB4 /* Foundation.framework */; };
 		D2F6646016C3B39B00BF0EB4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F6645F16C3B39B00BF0EB4 /* CoreGraphics.framework */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D2352ACD16CF7DF3001A28F0 /* cardback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardback.png; sourceTree = "<group>"; };
 		D2F6645816C3B39B00BF0EB4 /* Matchismo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Matchismo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F6645B16C3B39B00BF0EB4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D2F6645D16C3B39B00BF0EB4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -112,6 +114,7 @@
 			children = (
 				D2F6646A16C3B39B00BF0EB4 /* CardGameAppDelegate.h */,
 				D2F6646B16C3B39B00BF0EB4 /* CardGameAppDelegate.m */,
+				D2352ACD16CF7DF3001A28F0 /* cardback.png */,
 				D2F6646316C3B39B00BF0EB4 /* Matchismo-Info.plist */,
 				D2F6646416C3B39B00BF0EB4 /* InfoPlist.strings */,
 				D2F6646716C3B39B00BF0EB4 /* main.m */,
@@ -197,6 +200,7 @@
 				D2F6647016C3B39B00BF0EB4 /* Default@2x.png in Resources */,
 				D2F6647216C3B39B00BF0EB4 /* Default-568h@2x.png in Resources */,
 				D2F6647516C3B39B00BF0EB4 /* MainStoryboard.storyboard in Resources */,
+				D2352ACE16CF7DF3001A28F0 /* cardback.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +341,7 @@
 				D2F6647D16C3B39B00BF0EB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
