@@ -9,6 +9,7 @@
 #import "CardGameViewController.h"
 #import "PlayingCardDeck.h"
 #import "CardMatchingGame.h"
+#import "GameResult.h"
 
 @interface CardGameViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
@@ -18,12 +19,20 @@
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (strong, nonatomic) CardMatchingGame *game;
+@property (strong, nonatomic) GameResult *gameResult;
 @end
 
 @implementation CardGameViewController
-- (IBAction)dealButtonPressed:(id)sender {
-    self.game = [[CardMatchingGame alloc] initWithCardCount:self.cardButtons.count
-                                                  usingDeck:[[PlayingCardDeck alloc] init]];
+
+-(GameResult *)gameResult{
+    if (!_gameResult) {
+        _gameResult=[[GameResult alloc]init];
+    }
+    return _gameResult;
+}
+- (IBAction)dealButtonPressed: (id)sender {
+    self.game = nil;
+    self.gameResult=nil;
 
     self.flipCount=0;
     self.mode.enabled=YES;
@@ -34,6 +43,7 @@
     else {
         self.instructionsLabel.text=@"Toggle the Switch for 3 Card Matching mode.";
     }
+    
     
     
     
@@ -93,6 +103,7 @@
     
     self.flipCount++;
     [self updateUI];
+    self.gameResult.score=self.game.score;
 }
 
 -(void) setFlipCount:(int)flipCount {

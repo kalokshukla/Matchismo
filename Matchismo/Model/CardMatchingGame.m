@@ -68,7 +68,7 @@
                     }
                     break;
                 }
-                self.instructions=[NSString stringWithFormat:@"Flipped a %@.", card.contents];
+                self.instructions=[NSString stringWithFormat:@"Flipped %@.", card.contents];
             }
             
             self.score-=FLIP_COST;
@@ -115,13 +115,13 @@
                             break;
                         }
                         else{
-                            self.instructions=[NSString stringWithFormat:@"Flipped a %@ and a %@.", card.contents,otherCard.contents];
+                            self.instructions=[NSString stringWithFormat:@"Flipped %@ and %@.", card.contents,otherCard.contents];
                         }
                     }
                                         break;
                     }
                     else{
-                        self.instructions=[NSString stringWithFormat:@"Flipped a %@.", card.contents];
+                        self.instructions=[NSString stringWithFormat:@"Flipped %@.", card.contents];
                     }
                 }
             self.score-=FLIP_COST;
