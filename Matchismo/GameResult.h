@@ -15,8 +15,10 @@
 @property (nonatomic, readonly) NSTimeInterval duration;
 @property (nonatomic) int score;
 
-
 + (NSArray *)allGameResults;
+- (NSComparisonResult) compareScores:(GameResult *)game;
+- (NSComparisonResult) compareDurations:(GameResult *)game;
+- (NSComparisonResult) compareDates:(GameResult *)game;
 
 
 @end

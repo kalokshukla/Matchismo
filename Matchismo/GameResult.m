@@ -23,13 +23,26 @@
 #define END_KEY @"EndDate"
 #define SCORE_KEY @"Score"
 
-+(NSArray *) allGameResults{
++(NSMutableArray *) allGameResults{
     NSMutableArray *allGameResults = [[NSMutableArray alloc] init];
     for (id plist in [[[NSUserDefaults standardUserDefaults] dictionaryForKey:ALL_RESULTS_KEY] allValues]) {
         GameResult *result = [[GameResult alloc] initFromPropertyList:plist];
         [allGameResults addObject:result];
     }
     return allGameResults;
+}
+
+- (NSComparisonResult) compareScores:(GameResult *)game{
+    NSLog(@("%d %d\n"),self.score,game.score);
+    return (self.score <= game.score)?NSOrderedAscending:NSOrderedDescending;
+}
+
+- (NSComparisonResult) compareDates:(GameResult *)game{
+ return (self.start <= game.start)?NSOrderedAscending:NSOrderedDescending;
+}
+
+- (NSComparisonResult) compareDurations:(GameResult *)game{
+    return (self.duration <= game.duration)?NSOrderedAscending:NSOrderedDescending;
 }
 
 //convenience initializer
